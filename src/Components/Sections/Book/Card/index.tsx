@@ -4,10 +4,13 @@ import { OffPeak } from "Components/Icons/OffPeak";
 import { baseCard, CtaSecondary, flexCenter } from "Style/shared-styles";
 import { theme } from "Theme/theme";
 
-export const BookCard = () => {
+export const BookCard: React.FC<{ image: string }> = ({ image }) => {
   return (
-    <section css={{ ...baseCard, width: 310, flexShrink: 0, marginBottom: 32 }} data-testid="book-card">
-      <img src="images/book-card.png" alt="" />
+    <section
+      css={{ ...baseCard, width: 310, flexShrink: 0, marginBottom: 32 }}
+      data-testid="book-card"
+    >
+      <img src={`images/book-card-${image}.png`} alt="" />
       <section css={{ padding: 16 }}>
         <header>
           <h2 css={{ fontSize: 16, paddingBottom: 16 }}>

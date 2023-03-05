@@ -1,25 +1,42 @@
 /** @jsxImportSource @emotion/react */
-import { BookCard } from "Components/Sections/Book/Card";
-import { motion } from "framer-motion";
 import { useState } from "react";
-import { flexCenter } from "Style/shared-styles";
+import { motion } from "framer-motion";
+import { BookCard } from "Components/Sections/Book/Card";
 import { Tab, TabsPanelWrapper, TabsWrapper } from "./styles";
 import { theme } from "Theme/theme";
+import React from "react";
+import { flexCenter } from "Style/shared-styles";
 
-const types = ["Hair", "Nails", "Wellness"];
+const TABS_DATA = [
+  {
+    name: "Hair",
+    cards: [<BookCard key={1} image="one" />, <BookCard key={2} image="one" />],
+  },
+  { name: "Nails", cards: [<BookCard key={1} image="two" />] },
+  {
+    name: "Wellness",
+    cards: [
+      <BookCard key={1} image="three" />,
+      <BookCard key={2} image="three" />,
+      <BookCard key={3} image="three" />,
+    ],
+  },
+];
+
 export const Tabs = () => {
-  const [active, setActive] = useState(types[0]);
+  const [active, setActive] = useState(TABS_DATA[0].name);
+
   return (
     <>
       <TabsWrapper>
-        {types.map((type) => (
+        {TABS_DATA.map(({ name }) => (
           <Tab
-            key={type}
-            active={active === type}
-            onClick={() => setActive(type)}
+            key={name}
+            active={active === name}
+            onClick={() => setActive(name)}
           >
-            {type}
-            {active === type ? (
+            {name}
+            {active === name && (
               <motion.div
                 css={{
                   position: "absolute",
@@ -29,33 +46,19 @@ export const Tabs = () => {
                   height: "1px",
                   background: theme.colors.secondary,
                 }}
-                className="underline"
                 layoutId="underline"
               />
-            ) : null}
+            )}
           </Tab>
         ))}
       </TabsWrapper>
       <p />
 
-      <TabsPanelWrapper css={{ ...flexCenter(16) }}>
-        {active === "Hair" && (
-          <>
-            <BookCard />
-            <BookCard />
-          </>
-        )}
-        {active === "Nails" && (
-          <>
-            <BookCard />
-          </>
-        )}
-        {active === "Wellness" && (
-          <>
-            <BookCard />
-            <BookCard />
-            <BookCard />
-          </>
+      <TabsPanelWrapper css={flexCenter(16)}>
+        {TABS_DATA.map(({ name, cards }) =>
+          active === name ? (
+            <React.Fragment key={name}>{cards}</React.Fragment>
+          ) : null
         )}
       </TabsPanelWrapper>
     </>
