@@ -5,14 +5,17 @@ describe("Tabs", () => {
   it("should render the Tabs component with the initial active tab", () => {
     render(<Tabs />);
     const hairTab = screen.getByText("Hair");
-    expect(hairTab).toHaveStyle('border-bottom-color: #4036ED');
+    const activeBorder = screen.getByTestId("tab-active-border");
+    expect(hairTab).toHaveStyle("color: #071948");
+    expect(activeBorder).toBeInTheDocument()
   });
 
   it("should switch to the selected tab when clicked", () => {
     render(<Tabs />);
     const nailsTab = screen.getByText("Nails");
+    expect(nailsTab).toHaveStyle("color: #B5BAC8");
     fireEvent.click(nailsTab);
-    expect(nailsTab).toHaveStyle('border-bottom-color: #4036ED');
+    expect(nailsTab).toHaveStyle("color: #071948");
   });
 
   it("should display the correct BookCard components when the tab is changed", () => {

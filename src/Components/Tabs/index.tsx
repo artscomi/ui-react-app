@@ -38,6 +38,7 @@ export const Tabs = () => {
             {name}
             {active === name && (
               <motion.div
+                data-testId="tab-active-border"
                 css={{
                   position: "absolute",
                   bottom: "-1px",
