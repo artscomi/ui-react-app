@@ -55,10 +55,18 @@ export const Tabs = () => {
       </TabsWrapper>
       <p />
 
-      <TabsPanelWrapper css={flexCenter(16)}>
+      <TabsPanelWrapper>
         {TABS_DATA.map(({ name, cards }) =>
           active === name ? (
-            <React.Fragment key={name}>{cards}</React.Fragment>
+            <motion.div
+              key={name}
+              animate={{ scale: 1, opacity: 1 }}
+              initial={{ scale: .99, opacity: 0 }}
+              transition={{ duration: .4 }}
+              css={flexCenter(16)}
+            >
+              <React.Fragment>{cards}</React.Fragment>
+            </motion.div>
           ) : null
         )}
       </TabsPanelWrapper>
