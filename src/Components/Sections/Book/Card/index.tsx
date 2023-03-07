@@ -1,16 +1,30 @@
 /** @jsxImportSource @emotion/react */
+
 import { Clock } from "Components/Icons/Clock";
 import { OffPeak } from "Components/Icons/OffPeak";
+import { useState } from "react";
 import { baseCard, CtaSecondary, flexCenter } from "Style/shared-styles";
 import { theme } from "Theme/theme";
+import { Skeleton } from "./styles";
 
 export const BookCard: React.FC<{ image: string }> = ({ image }) => {
+  const [isImageLoaded, setIsImageLoaded] = useState<boolean>(false);
+
   return (
     <section
       css={{ ...baseCard, width: 310, flexShrink: 0, marginBottom: 32 }}
       data-testid="book-card"
     >
-      <img src={`images/book-card-${image}.png`} alt="" />
+      <div css={{ position: "relative", width: 278, height: 114 }}>
+        {!isImageLoaded && <Skeleton />}
+
+        <img
+          src={`images/book-card-${image}.png`}
+          alt=""
+          onLoad={() => setIsImageLoaded(true)}
+        />
+      </div>
+
       <section css={{ padding: "1rem" }}>
         <header>
           <h2 css={{ fontSize: "1rem", paddingBottom: "1rem" }}>
