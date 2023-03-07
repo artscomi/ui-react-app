@@ -18,13 +18,13 @@ export const NailArt: React.FC = () => (
           css={{
             paddingBottom: 24,
             fontWeight: 700,
-            fontSize: 32,
+            fontSize: "2rem",
             lineHeight: 1,
           }}
         >
           Nail art secrets and new technique
         </p>
-        <div css={[{ ...flexBetween(15) }, { fontSize: 12 }]}>
+        <div css={[{ ...flexBetween(15) }, { fontSize: "0.75rem" }]}>
           <CtaSecondary css={{ backgroundColor: theme.colors.accent }}>
             Top rated 2021
           </CtaSecondary>

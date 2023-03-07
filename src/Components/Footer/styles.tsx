@@ -21,7 +21,7 @@ export const FooterButton = styled.button<{ isActive: boolean }>(
     backgroundColor: theme.colors.white,
     padding: theme.spacings.s,
     width: "100%",
-    fontSize: 10,
+    fontSize: "0.625rem",
     justifyContent: "center",
     display: "flex",
     alignItems: "center",

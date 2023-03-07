@@ -42,7 +42,7 @@ export const CtaSecondary = styled.div({
   borderRadius: 100,
   padding: "5px 8px",
   textAlign: "center",
-  fontSize: 12,
+  fontSize: "0.75rem",
   fontWeight: 700,
   width: "auto",
 });
@@ -63,7 +63,7 @@ export const Input = styled.input<{
     paddingRight: iconRight ? 0 : 44,
     "&::placeholder": {
       color: theme.colors.greyDark,
-      fontSize: 14,
+      fontSize: "0.875rem",
     },
   };
 });

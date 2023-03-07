@@ -6,11 +6,11 @@ import { theme } from "Theme/theme";
 export const BookSection: React.FC = () => {
   return (
     <>
-      <h2 css={{ paddingBottom: 8, fontSize: 20, fontWeight: 700 }}>
+      <h2 css={{ paddingBottom: 8, fontSize: "1.25rem", fontWeight: 700 }}>
         Ready to book again?
       </h2>
       <p
-        css={{ paddingBottom: 24, fontSize: 14, color: theme.colors.greyLight }}
+        css={{ paddingBottom: "24px", fontSize: "0.875rem", color: theme.colors.greyLight }}
       >
         Salons are waiting for you!
       </p>

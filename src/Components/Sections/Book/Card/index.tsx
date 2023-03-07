@@ -11,9 +11,9 @@ export const BookCard: React.FC<{ image: string }> = ({ image }) => {
       data-testid="book-card"
     >
       <img src={`images/book-card-${image}.png`} alt="" />
-      <section css={{ padding: 16 }}>
+      <section css={{ padding: "1rem" }}>
         <header>
-          <h2 css={{ fontSize: 16, paddingBottom: 16 }}>
+          <h2 css={{ fontSize: "1rem", paddingBottom: "1rem" }}>
             Nynphea Spa di Luca Aloisi e Mario Liti Caputo
           </h2>
         </header>
@@ -21,7 +21,7 @@ export const BookCard: React.FC<{ image: string }> = ({ image }) => {
         <section>
           <p
             css={{
-              fontSize: 12,
+              fontSize: "0.75rem",
               paddingBottom: 8,
               color: theme.colors.greyDark,
             }}
@@ -30,8 +30,8 @@ export const BookCard: React.FC<{ image: string }> = ({ image }) => {
           </p>
           <div css={[{ ...flexCenter(4) }, { paddingBottom: 21 }]}>
             <Clock />
-            <p css={{ fontSize: 12, fontWeight: 700 }}>4.7</p>
-            <p css={{ fontSize: 12, color: theme.colors.greyLight }}>
+            <p css={{ fontSize: "0.75rem", fontWeight: 700 }}>4.7</p>
+            <p css={{ fontSize: "0.75rem", color: theme.colors.greyLight }}>
               171 reviews
             </p>
           </div>
@@ -43,7 +43,7 @@ export const BookCard: React.FC<{ image: string }> = ({ image }) => {
           </CtaSecondary>
           <div css={{ ...flexCenter(4) }}>
             <OffPeak />
-            <p css={{ fontSize: 12 }}>Off peak</p>
+            <p css={{ fontSize: "0.75rem" }}>Off peak</p>
           </div>
         </footer>
       </section>

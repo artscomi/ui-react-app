@@ -32,7 +32,7 @@ export const Modal: React.FC<{ onClose: VoidFunction }> = ({ onClose }) => {
       >
         <Close />
       </button>
-      <h2 css={{ fontSize: 24, fontWeight: 700, paddingBottom: 32 }}>Search</h2>
+      <h2 css={{ fontSize: "1.5rem", fontWeight: 700, paddingBottom: 32 }}>Search</h2>
 
       <ModalButtonSection handleClick={handleClick} activeTreatment={activeTreatment} />
       <Form treatment={activeTreatment} />
