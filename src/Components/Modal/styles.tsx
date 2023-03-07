@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { motion } from "framer-motion";
 import { theme } from "Theme/theme";
 
-export const ModalContent = styled(motion.div)({
+export const ModalContent = styled(motion.dialog)({
   position: "fixed",
   top: "0",
   right: "0",
