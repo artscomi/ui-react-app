@@ -61,7 +61,7 @@ export const Tabs = () => {
             <motion.div
               key={name}
               animate={{ scale: 1, opacity: 1 }}
-              initial={{ scale: .99, opacity: 0 }}
+              initial={{ scale: .99, opacity: .5 }}
               transition={{ duration: .4 }}
               css={flexCenter(16)}
             >
