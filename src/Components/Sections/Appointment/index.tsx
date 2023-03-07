@@ -9,7 +9,7 @@ export const AppointmentSection: React.FC = () => (
         display: "flex",
         alignItems: "center",
         gap: 8,
-        fontSize: 24,
+        fontSize: "1.5rem",
         fontWeight: 700,
         paddingBottom: 20,
       }}
