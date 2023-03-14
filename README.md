@@ -22,4 +22,8 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 Runs cypress tests with Cypress Studio
 
+### `yarn test`
+
+Runs Jest unit tests
+
 
