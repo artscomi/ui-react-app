@@ -5,7 +5,7 @@ const shine = keyframes({
   to: { backgroundPositionX: "-200%" },
 });
 
-export const Skeleton = styled.div(() => ({
+export const Skeleton = styled.div({
   backgroundColor: "#eee",
   background: "linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%)",
   borderRadius: "5px",
@@ -18,4 +18,4 @@ export const Skeleton = styled.div(() => ({
   right: 0,
   bottom: 0,
   left: 0,
-}));
+});

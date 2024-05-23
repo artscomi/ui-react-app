@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { baseCard } from "Style/shared-styles";
 import { theme } from "Theme/theme";
 
-export const Card = styled.section(() => ({
+export const Card = styled.section({
   ...baseCard,
   marginBottom: 53,
   "&:after": {
@@ -16,4 +16,4 @@ export const Card = styled.section(() => ({
     transform: "translateY(-70%)",
     zIndex: -1,
   },
-}));
+});
