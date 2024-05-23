@@ -1,12 +1,14 @@
 # UX/UI React app
 
-v1.0
+Mobile React web app
 
 ## Description
 
-Starting from Screen 1, when the user scrolls the Header transitions to a fixed position on top as showed in Screen 2.
+<img width="441" alt="image" src="https://github.com/artscomi/ui-react-app/assets/59236081/5cbf2902-9016-4d60-ba0a-7da11504ce14">
+<img width="392" alt="image" src="https://github.com/artscomi/ui-react-app/assets/59236081/0415dbd4-7da8-4024-9d43-39dec7dc7e97">
 
-Also when the Search input is focused there is another transition to the dedicated "Search" view on Screen 3.
+
+
 
 
 ## Available Scripts
